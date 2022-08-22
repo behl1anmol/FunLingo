@@ -1,0 +1,19 @@
+﻿@page
+@model FunLingo.Pages.GameModel
+@{
+    ViewData["Title"] = "FunLingo";
+}
+
+<h2> No of players: @ViewData["Players"]</h2>
+
+<h3>Random Number: @ViewData["RandomNumber"]</h3>
+<h3>Random Number: @ViewData["RandomQuestion"]</h3>
+
+
+
+<form method="post">
+    <input type="submit" value="GenerateRandomNumber"
+           asp-page-handler="GenerateRandomNumber" />
+    <input type="submit" value="GenerateRandomQuestion"
+           asp-page-handler="GenerateRandomQuestion" />
+</form>
