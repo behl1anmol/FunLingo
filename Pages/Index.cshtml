@@ -3,26 +3,24 @@
 @{
     ViewData["Title"] = "Home page";
 }
-<body>
-<div>
-    <h1 class="display-4 text-center">Koffee with Naveen and Anmol</h1>
+<body style="align-content:center">
+     <div>
+        <h1 class="display-4 text-center">Koffee with Naveen and Anmol</h1>
+     </div>
     <h2>Rules:</h2>
     <p>
         <ul>
+             <li>
+                Random number will be generated to choose a player.
+             </li>
             <li>
                 Five random questions will be asked from each player.
             </li>
             <li>
-                Every player will have 10 seconds to answer.
+                It will be a rapid fire round. Every player must answer quickly.
             </li>
-            <li>
-                Random number will be generated to choose a player.
-            </li>
+
         </ul>
-.
-        
-
-
     </p>
     <form method="post">
             <label>Enter Number of Players:</label>
@@ -30,5 +28,5 @@
         <button type="submit" asp-page-handler="PlayersAdded">Submit</button>
     </form>
 
-</div>
+
 </body>

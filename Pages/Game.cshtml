@@ -4,17 +4,18 @@
     ViewData["Title"] = "FunLingo";
 }
 
-<div class="text-center">
-    <h2 class="display-4">Koffee with Naveen and Anmol - @ViewData["Players"] </h2>
-</div>
-<body>
+
+<body style="align-content:center">
+    <div class="display-4 text-center">
+        <h1 class="display-4">Koffee with Naveen and Anmol - @ViewData["Players"] </h1>
+    </div>
     <form method="post">
         <table>
             <tr>
                 <h3 class="display-3 text-center"> @ViewData["RandomNumber"]</h3>
             </tr>
             <tr>
-                <label> @ViewData["RandomQuestion"]</label>
+                <label style="width:100%"> @ViewData["RandomQuestion"]</label>
             </tr>
             <tr>
                 <td style="padding: 0 15px">
