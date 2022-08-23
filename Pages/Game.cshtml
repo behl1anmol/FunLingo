@@ -4,16 +4,31 @@
     ViewData["Title"] = "FunLingo";
 }
 
-<h2> No of players: @ViewData["Players"]</h2>
+<div class="text-center">
+    <h2 class="display-4">FunLingo - @ViewData["Players"] </h2>
+</div>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <h3 class="display-3 text-center"> @ViewData["RandomNumber"]</h3>
+            </tr>
+            <tr>
+                <label> @ViewData["RandomQuestion"]</label>
+            </tr>
+            <tr>
+                <td style="padding: 0 15px">
+                    <button type="submit" asp-page-handler="GenerateRandomNumber" >
+                        GenerateRandomNumber
+                    </button>
+                </td>
+                <td>
+                    <button type="submit" asp-page-handler="GenerateRandomQuestion">
+                        GenerateRandomQuestion
+                    </button>
+                </td>
+            </tr>
+        </table>
 
-<h3>Random Number: @ViewData["RandomNumber"]</h3>
-<h3>Random Number: @ViewData["RandomQuestion"]</h3>
-
-
-
-<form method="post">
-    <input type="submit" value="GenerateRandomNumber"
-           asp-page-handler="GenerateRandomNumber" />
-    <input type="submit" value="GenerateRandomQuestion"
-           asp-page-handler="GenerateRandomQuestion" />
-</form>
+    </form>
+</body>
