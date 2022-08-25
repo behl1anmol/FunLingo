@@ -40,14 +40,18 @@ namespace FunLingo.Pages
             RandomNo = Request.Query["RandomNumber"];
             ViewData["RandomNumber"] = RandomNo;
             Id = Request.Query["QId"];
-            using StreamReader file = new StreamReader("Questions.txt");
-            string? ln;
 
-            while ((ln = file.ReadLine()) != null)
+            if(Questions.Count == 0)
             {
-                _questions.Add(ln);
+                using StreamReader file = new StreamReader("Questions.txt");
+                string? ln;
+
+                while ((ln = file.ReadLine()) != null)
+                {
+                    _questions.Add(ln);
+                }
+                file.Close();
             }
-            file.Close();
             ViewData["RandomQuestion"] = Questions.ElementAt(Int16.Parse(Id));
 
 
